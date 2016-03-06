@@ -5,7 +5,64 @@
 	<title>Praktikum 03 - selektorite ülesanne</title>
 	<style type="text/css">
 	/*  SIIN KIRJELDADA SELEKTORID NING ELEMENDIS NÕUTUD STIIL */
-	
+		p {
+			color: red;
+			
+		}
+		div {
+			width: 300px;
+			text-align: center;
+			
+			
+			
+		}
+		#keha ul { 
+			/* border: 2px solid red; proovisin pildi järgi teha */
+			width: 90%;
+			background-color: gray;
+			list-style: none; 
+			
+			display: inline-block; 
+			 margin-top: 0px;
+			 margin-bottom: 0px;
+			 margin-right: auto;
+			 margin-left: auto;
+			 padding-top: 2px;
+			padding-right: 3px;
+			padding-bottom: 2px;
+			padding-left: 3px;
+			
+			
+		
+		}
+		div p {
+			background-color: #c0c0c0;
+		}
+		#keha {
+			background-color: gray;
+		}
+		#pea span {
+			background-color: #c0c0c0;
+			font-size: 30px;
+		}
+		.jalg {
+			background-color: gray;
+			color: white;
+		}
+		.tyhik {
+			background-color: gray;
+		}
+		/*.esimene {
+			border:1px solid red;
+		}
+		.paragrahv {
+			border:1px solid red;
+			margin-top: 0px;
+			 margin-bottom: 0px;
+			 margin-right: auto;
+			 margin-left: auto;
+			
+		} */
 	</style>
 </head>
 <body>
@@ -17,15 +74,15 @@
 	</div>
 	<div id="keha">
 		<ul>
+			<li class="esimene"><p class="paragrahv">...</p></li>
 			<li><p>...</p></li>
 			<li><p>...</p></li>
 			<li><p>...</p></li>
-			<li><p>...</p></li>
-			<li><p>...</p></li>
+			<li class="viimane"><p>...</p></li>
 		</ul>
 	</div>
 	<div>
-		<p>&nbsp;</p>
+		<p class="tyhik">&nbsp;</p>
 		<span class="jalg">OOOOOOOO</span> <span class="jalg">OOOOOOOO</span>
 	</div>
 </body>
