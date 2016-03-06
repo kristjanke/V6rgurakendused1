@@ -1,0 +1,43 @@
+/* p {
+	font-size:150%;
+} */
+
+body {
+	background-color: lightgreen;
+
+}
+
+#pealkiri {
+	color: #6666ff;
+}
+
+#wrap {
+	background-color: lightblue;
+}
+
+#content {
+	background-color: #ccccff;
+	text-align: justify;
+}
+
+#menu a {
+	color: #339933;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: large;
+}
+
+#menu a:hover {
+	color: red;
+	background-color: #ccccff;
+	text-decoration: none;
+}
+
+img.pilt {
+	border-style: dotted;
+	border-color: #ff0000;	
+}
+
+/* p.logopilt {
+	border: none;
+} */
