@@ -1,0 +1,38 @@
+.stopp {
+	width: 100px;
+	height: 100px;
+}
+h4 {
+	color: green;
+}
+
+h1 {
+	background-color: lightblue;
+	width: 120px;
+	text-align: center;
+	border-style: solid;
+	border-color: blue;
+	border-width: 5px;
+	border-radius: 15px;
+}
+p {
+	font-size: large;
+	font-family: Times, serif;
+	font-style: italic;
+	text-align: justify;
+}
+ul li{
+	text-decoration: underline;
+	font-weight: bold;
+}
+ol {
+	list-style-type: hebrew;
+	cursor: pointer;
+}
+ul li:hover {
+	text-decoration: none;
+	border-style: solid;
+}
+ol li:hover {
+	background-color: red;
+}
