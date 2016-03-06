@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+ <title>Galerii</title>
+</head>
+<body>
+<div id="wrap">
+	<h2 id="pealkiri">Tere tulemast!</h2>
+	
+	<ul id="menu">
+		<li><a href="login.html">Logi sisse</a></li>
+		<li><a href="pildivorm.html">Lisa pilt</a></li>
+		<li><a href="pealeht.html">Esileht</a></li>
+	</ul>
+	<div id="content">
+		<form action="pealeht.html" method="POST" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>Pealkiri</td>
+					<td>
+						<input type="text" name="title" />
+					</td>
+				</tr>
+				<tr>
+					<td>Autor</td>
+					<td>
+						<select name="author">
+							<option>Vali autor!</option>
+							<option value="0">Teadmata</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Hind</td>
+					<td>
+						<input type="number" name="price"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<textarea name="description" rows="10" cols="50"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Väike pilt</td>
+					<td>
+						<input type="file" name="small">
+					</td>
+				</tr>
+				<tr>
+					<td>Suur pilt</td>
+					<td>
+						<input type="file" name="big">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" name="button" value="Lisa"/>
+					</td>
+					<td>
+						<input type="submit" name="button" value="katkesta"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<p>
+  	<a href="http://validator.w3.org/check?uri=referer">
+  		<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+  	</a>
+	</p>
+</div>
+</body>
+</html>

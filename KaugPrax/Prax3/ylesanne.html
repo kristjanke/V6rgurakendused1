@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Praktikum 3 - Ülesande kirjeldus</title>
+  <style type="text/css">
+		ol li {margin-top:10px;}
+		ul li {margin-top:3px;}  
+		strong {color: red;}
+		/*a {text-decoration:none;}*/
+  </style>
+</head>
+<body>
+<h1>Praktikum 3</h1>
+<p>Täiendame teises praktikumis loodud lehte andes sellele stiili.<br/>
+<strong>NB! Nüüd ja ka edaspidi, kui teil ei ole eelmise praktikumi ülesanne lahendatud, siis võite laadida alla õppejõu lahenduse DOWNLOAD_(praxi-nr).zip näol.</strong></p>
+
+<h3>Lühidalt CSS-ist</h3>
+<ul>
+<li>CSS-is viidatakse HTML elementidele ning antakse neile stiilikirjeldusi. Elementidele viitamiseks kasutatakse selektoreid. <br/>Erinevate selektorite kohta loe <a href="http://www.w3schools.com/cssref/css_selectors.asp" title="selectors">siit</a></li>
+<li>CSS-iga saab anda HTML elementidele igasuguseid omadusi. <br/>Nimekiri erinevatest CSS-iga muudetavatest omadustest <a href="http://www.w3schools.com/cssref/default.asp" title="CSS properties">siin</a></li>
+<li>tüüpiline CSS näeb välja taoline:<br/>
+<em>selektor { <br/>
+&nbsp;&nbsp;omadus1:väärtus; <br/>
+&nbsp;&nbsp;omadus2:väärtus;<br/>}<br/>
+selektor2, selektor3 { <br/>
+&nbsp;&nbsp;omadus:väärtus;<br/>}</em></li>
+</ul>
+
+
+<h3>Ülesanded</h3>
+<ol>
+	<li>kui soovid eelmise praktikumi seisu jäädvustada, kopeeri eelmise praktikumi tulemus uude kausta ning jätka oma tegevust seal</li>
+	<li>Ava <strong>pealeht.html</strong> ning:
+		<ul>
+		<li>tekita esimesel korral lisatud pildile väiksem versioon.  Selleks kasuta GIMP-i või mingit muud pilditöötlustarkvara.(Vali mingi sobiv formaat nt 150x100 px. Ürita pilti mitte väga välja venitada, väiksem versioon võib ka olla vaid osa suurest pildist). Kui ei oska, siis loe <a href="http://www.simplehelp.net/2007/08/13/how-to-resize-images-using-the-gimp/" title="abix1" target="_blank">siit</a> ja <a href="http://www.novell.com/coolsolutions/feature/11503.html" title="abix2" target="_blank">siit</a> <br/><b><a href="http://pixlr.com/editor/">kui pilditöötlustarkvara puudub</a></b></li>
+		<li>kuna pilte saab olema palju, siis on selguse mõttes parem nad eraldi kaustadesse paigutada. <b>Selleks tekita kaks uut kausta: <em>small</em> ja <em>big</em> ning liiguta pildid neisse. </b></li>
+   	<li>asenda pealehel suur pilt väiksega (NB! aadress on nüüd natuke teine, kui ei mäleta vaata esimese loengu slaide) ning muuda see väike pilt lingiks suurele pildile (kui oled segaduses siis vaata kuidas validaatori logo tehtud on)</li>
+   	<li><b>lisa veel paar pilti</b></li>
+   	<li>Kontrolli, et (<a href="http://validator.w3.org" title="W3 validaator" target="_blank">http://validator.w3.org</a>) on ikka veel rõõmus ja roheline.</li>
+	</ul>
+	</li>
+	<li>lisa <em>head</em> tagide vahele stiili kirjeldamiseks vajalik <em>style</em> element (selle vahele saab kirjutada CSS-i)<br/>
+	<textarea cols="40"><style type="text/css">
+</style></textarea>
+	</li>
+	<li>kujunda pealkirjale sobiv värv (color).
+			<ul>
+				<li>Selleks, et kõik tulevased selle taseme pealkirjad samat värvi ei oleks kasuta css-is selektorit <em>#pealkiri</em> mis viitab konkreetsele id atribuudi väärtusele.  </li>
+				<li>Värvi saab kirjutada kas #HEX NUMBRID või rgb(decimal numbrid). Näiteks #F8F8FF ja rgb(248,248,255) on ekvivalentsed <a href="http://en.wikipedia.org/wiki/Web_colors" title="värvid" target="_blank">Värvikaardi leiad siit</a></li>
+			</ul>
+		</li>
+		<li>muuta menüülinkide stiili (kasutada nt: <em>color, text-decoration, font-weight, font-size</em> jne.). Kasutada selektorit <b>#menu a</b> piiramaks stiili mõju menüü sees olevatele linkidele</li>
+		<li>määrata stiil ka linkidele, mille kohal parasjagu hiirega ollakse (et neid rohkem esile tuua). Selleks kasutada selektorit <b>#menu a:hover</b>, kus <em>:hover</em> ütleb, et hiirega ollakse elemendi kohal</li>
+	<li>määra kogu lehe taustavärv (background) ning joonda kõik elemendid keskele (text-align). <br/>Selleks, et kõigi elementide sisu oleks keskele joondatud piisab neid ümbritseva elemendi (<em>body</em>) stiili kirjeldamisest</li>
+	<li>kirjelda div-ile <em>#content</em> järgmine kujundus:
+				<ul>
+					<li>taustavärv valge (#ffffff)</li>
+					<li>padding 20px </li>
+				</ul>
+			</li>
+	<li>Organiseerida nii, et piltidel on raam (border) ümber, aga validaatori nupul seda ei ole.<br/>
+			 Vihje: kirjelda stiil ainult kindla div-i sees olevatele img elementidele või anna piltidele <em>class</em> atribuut.</li>
+	<li>Kui kasutad windowsi, saad kontrollida kas IE-s validaatori logol on raam või mitte. Selle saab eemaldada andes validaatori logole omaduse <em>border:none;</em></li>
+	<li>Kontrolli taaskord, et (<a href="http://validator.w3.org" title="W3 validaator" target="_blank">http://validator.w3.org</a>) on ikka veel rõõmus ja roheline, seda saad teha lihtsalt: kliki lehel olevale validaatori logo pildile.</li>
+	<li>Lisaks saad kontrollida CSS õigsust <a href="http://jigsaw.w3.org/css-validator/">CSS validaatoris</a>. Edaspidiseks mugavaks CSS valideerimiseks võid (aga ei pea) pealeht.html HTML validaatori logo juurde lisada ka CSS validaatori logo: <textarea cols="80" rows="3"><a href="http://jigsaw.w3.org/css-validator/check/referer">
+  <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+</a></textarea></li>
+</ol>
+</body>
+</html>
