@@ -1,0 +1,25 @@
+.bead {
+	height: 50px;
+	width: 50px;
+	background: lightgreen;
+	border: 1px solid green;
+	border-radius: 50%;
+	box-shadow: 0px -11px 23px -3px black inset;
+	float: right;
+	margin-top: -25px;
+}
+.row {
+	clear: both;
+	border: 3px solid black;
+	margin-top: 50px;
+}
+#raam {
+    border-width: 5px;	
+    border-style: outset;
+	border-color: blue;
+	padding-bottom: 50px;
+	border-width: 10px;
+}
+.bead.vasak {
+	float: left;
+}
