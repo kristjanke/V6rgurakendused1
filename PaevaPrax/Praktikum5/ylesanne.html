@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <title>Praktikum 5 - Ülesande kirjeldus</title>
+  <style type="text/css">
+		ol li {margin-top:10px;}
+		ul li {margin-top:3px;}  
+		strong {color: red;}
+		span:hover {cursor:pointer;}
+  </style>
+</head>
+<body>
+<h1>Praktikum 5</h1>
+<p>Täiendame neljandas praktikumis loodud lehte.</p>
+<p>Võtame kasutusele JavaScripti.</p>
+
+ <h3>Lühidalt JavaScriptist</h3>
+<ul>
+	<li>Javascriptiga saab teha palju imelisi asju, üheks neist on HTML elementide mõjutamine.<br/> 
+			Selleks, et HTML elemente nende id väärtuse järgi selekteerida on JS-is kasutusel käsk <b>document.getelementById('väärtus')</b> mis tagastab vastava objekti, mida saab tema edasiseks mõjutamiseks kasutada. (rohkem saad lugda nt <a href="http://enos.itcollege.ee/~ttanav/VRI/abiks/javascript.html">abimaterjalist</a>)
+	</li>
+	<li>Iga HTML elemendiga on seotud sündmused mida saab JS abil 'püüda'. Nende kohta saad lugeda näiteks <a href="http://www.w3schools.com/js/js_htmldom_events.asp" title="JS events">siit</a></li>
+	<li>Lisaks sellele saab JS abil muuta HTML elemente lisades juurde <a href="http://www.w3schools.com/js/js_htmldom_html.asp" title="JS ja HTML">HTML koodi</a> või muutes <a href="http://www.w3schools.com/js/js_htmldom_css.asp" title="JS ja CSS">CSS omadusi</a> </li>
+	<li>JS-is on silumiseks: <b>console.log("logitav tekst");</b> või <b>alert('tekst');</b> mis on paras tüütus. Konsooli saab näha eri veebilehitsejates eri moodi, aga enamasti peaks F12 aitama.</li>
+</ul>
+ 
+ 
+<h3>Ülesanded</h3>
+<ol>
+	<li>kui soovid eelmise praktikumi seisu jäädvustada, kopeeri eelmise praktikumi tulemus uude kausta ning jätka oma tegevust seal</li>
+	<li>luua uus tühi fail <strong>script.js</strong>. Sellesse hakkame JavaScripti kirjutama</li>
+	<li>ava fail <strong>pealeht.html</strong> ja:
+		<ol>
+			<li>lisa <b>head</b> tag-ide vahele pärast <b>title</b> tag-e järgmine rida:<br/>
+			<textarea cols="80">
+<script type="text/javascript" src="script.js"></script>
+			</textarea><br/>Sellega lisame lehele javascript koodi endas hoidva faili script.js.
+			</li>
+			<li>teeme nii, et kui <b>hiirega galeriis oleva pildi kohal olla, tekib selle pildi ümber raam</b> pildi pealkirja ja autoriga (see info on meil pildi alt atribuudis). <br/>
+					Selleks teeme kõigepealt HTMLi ja CSSi abil valmis raami ning <b>hiljem paigutame selle JavaScripti abil õigesse kohta.</b> 
+				<ul>
+					<li>esimesena loo pärast <b>wrap</b>-i lõpetavat <b>&lt;/div&gt;</b> ja enne <b>&lt;/body&gt;</b>-i uus <b>div</b> element <b>id</b> väärtusega <b>frame</b> </li>
+					<li>lisa div-i <b>frame</b> sisse uus <b>lingielement </b> (a) atribuudiga <b>href="#"</b>. <br/>
+							See saab hiljem JS abil uue <b>href</b> atribuudi väärtuse vastavalt pildile.</li>
+					<li>järgmiseks lisa just loodud lingi vahele uus <b>pilt</b> (img) <b>id</b> väärtusega <b>filler</b>. <br/>
+							See aitab meil tagada, et raam läheb pildi ümber mitte kohale.
+						<ul>
+							<li><b>src</b> atribuudi väärtuseks olgu vaikimisi # (see asendatakse JS abil)</li>
+							<li><b>width</b> ja <b>height</b> atribuutide väärtuseks olgu vaikimisi mingi suvalised suurused nt 100 (need asendatakse ka JS abil)</li>
+							<li><b>alt</b> atribuudi väärtuseks panna midagi suvalist nt "Vaata suuremalt!" (see on selleks, et validaator rahule jääks.)</li>
+						</ul>
+					</li>
+					<li>nüüd lisa  <b>lingi</b> järgi veel üks <b>div</b> id väärtusega <b>title</b>. Kirjuta sellesse midagi, et kujunduse määramise ajal oleks terviklikum pilt.<br/>
+							Selle teksti asemele tuleb hiljem JS abil pildi pealkiri ja autor.</li>
+				</ul>
+			</li>
+			<li><span onclick="$('#help').toggle();">kliki siia kui juhend jäi segaseks</span><br/>
+<textarea cols="90" rows="7" id="help" style="display:none;"><div id="frame" >
+ <a href="#">
+  <img src="#" id="filler" width="100" height="100" alt="Vaata suurelt!"/>
+ </a>
+ <div id="title">ajutine tekst</div>
+</div></textarea></li>
+
+		</ol>
+	
+	</li>
+	<li>ava fail <strong>stiil.css</strong>, et kujundada raami stiili
+		<ul>
+			<li>anna pildile <em>#filler</em> järgmised omadused:
+				<ul>
+					<li><b>border</b>, selle laius ja värv vali ise oma soovi järgi. (laiema raami puhul võib olla mõistlik border-bottom-width -ga alumise äära laiuse piiramine)</li>
+<li>sunni pilti asetsema teksti alumise ääre suhtes kasutades omadust <b>vertical-align:bottom;</b> (vaikimisi paigutatakse pildid tekstirea keskosa suhtes)</li>
+				</ul>
+			</li>
+			<li>anna div-ile <em>#title</em> järgmised omadused:
+				<ul>
+					<li><b>taustavärv</b>, vastavalt raami värvile</li>
+					<li>keela teksti x-teljeline üleminek div-i piiridest (abi saad <a href="http://www.w3schools.com/cssref/css3_pr_overflow-x.asp" title="overflow-x">siit</a>)</li>
+				</ul>
+			</li>
+			<li>anna div-ile <em>#frame</em> järgmised omadused:
+				<ul>
+					<li>absoluutne paigutus</li>
+					<li>et raam oleks ruumilisem, lisame talle varju (abi saab <a href="http://www.css3.info/preview/box-shadow/" title="css3 box-shadow">siit</a>)</li>
+				</ul>
+			</li>
+		<li>Kui nüüd lehte vaadata, siis on lehe all üks veider element. Selleks, et ta  oleks vaikimisi nähtamatu lisada elemendile <b>#frame</b> omadus <b>display:none;</b> Raam muudetakse hiljem uuesti nähtavaks JS abil.</li>
+		</ul>
+	</li>
+	<li>ava fail nimega <strong>script.js</strong>
+		<ul>
+			<li>Lisada kohe faili algusesse koodijupp: <br/>
+				<textarea cols="40" rows="3">window.onload = function() {
+ // siia pane sündmushaldurite loomine
+}</textarea>
+				<ul>
+					<li>Selleks, et iga galerii pildi puhul saaks hiirega kohale minemise peale midagi teha on meil kaks erinevat lähenemist:<br/>
+						<b>1.</b> lisada igale galeriis olevale lingielemendile sündmusartibuut onmouseover<br/>
+						<b>2.</b> lisada igale galeriis olevale lingielemendile sündmushaldur.
+						<br/>
+						Kuna me ei tea kui palju meil saab tulevikus pilte olema, ning soovime, et HTML kood oleks võimalikult lihtne lugeda, <b>eelistame seekord teist lähenemist</b>
+					</li>
+					<li>Esimesena hankida funktsiooni sees galerii seest kõik lingid. Selleks <b>hankida kõigepealt galerii element ning otsida sellest omakorda lingielemente</b>: 
+						<textarea cols="80">lingid = document.getElementById("gallery").getElementsByTagName('a');</textarea>
+						<br/> Sellega saime <b>massiivi</b> galerii sees olevatest linkidest.
+					</li>
+					<li>Seejärel kasutada <b>for tsüklit</b>, et määrata igale elemendile eraldi <a href="http://idratherbewriting.com/2013/02/04/events-and-listeners-javascript/">sündmushaldur</a><br/>
+						<textarea cols="50" rows="5">for (var i=0;i&lt;lingid.length;i++){
+  lingid[i].onmouseover=function(){
+    over(this); 
+  };
+}</textarea><br/>funktsiooni <b>over</b> väljakutsumisel sisendväärtusena kasutusel märksõna <b>this</b> viitab elemendile, millega sündmus seotud on.
+					</li>
+					<li>Pärast linkidele sündmushaldurite lisamist (for tsükkel) tuleb tegeleda sündmusega, kus <b>pildiraami kohalt väljudes peaks ta ära kaduma</b>. Selleks lisada funktsiooni lõppu: <br/>
+						<textarea cols
+						="60" rows="3">document.getElementById("frame").onmouseout=function(){
+  this.style.display="none";
+};</textarea></li>
+				</ul>
+			</li>
+			<li>Luua pärast eelmise koodibloki (window.onload blokk) lõppu uus funktsioon <b>over(el)</b>. Sellel on sisendparameetriks lingielement, mille kohal hiirega oldi
+				<ul>
+					<li>Kõigepealt hankida vajalikud elemendid:<br/>
+						<textarea cols="40" rows="5">pilt=el.getElementsByTagName('img')[0];
+	
+raam=document.getElementById("frame");
+filler=document.getElementById("filler");
+link=raam.getElementsByTagName('a')[0];</textarea></li>
+					<li>Seejärel defineerida 2 muutujat, mis hoiavad endas  galeriis oleva pildi piirjoone laiust ning raamis oleva elemendi <em>filler</em> piirjoone laiust: <br/>
+						<textarea cols="30" rows="2">imgborder=2;
+fillerborder=10;</textarea><br/> kui te neid ei mäleta, siis vaadake stiil.css-ist järgi
+</li>
+					<li>Seejärel hankida pildi alt väärtus ning paigutada see raamis oleva elemendi <em>title</em> sisse<br/>
+						<textarea cols="50" rows="2">text=pilt.alt;
+document.getElementById("title").innerHTML=text;</textarea></li>
+					<li>Muuta raamis olev link pildi ümber olnud lingiks (selleks, mis sündmuse välja kutsus)<br/><textarea cols="30" rows="1">link.href=el.href;</textarea></li>
+					<li>Muuta raamis oleva <em>filler</em> pildi atribuutide väärtuseid, et see kuvaks õiget pilti<br/><textarea cols="30" rows="3">filler.src=pilt.src;
+filler.height=pilt.height;
+filler.width=pilt.width;</textarea></li>
+					<li>Selleks, et me saaks raami paigutada on vaja teada pildi asukohta. Selle saab:<br/><textarea cols="40" rows="1">off=pilt.getBoundingClientRect();</textarea></li>
+					<li>Lõpuks muuta raami elemendi <em>frame</em> enda stiili paigutamaks teda pildi kohale<br/>
+						<textarea cols="70" rows="4">raam.style.top=(off.top-(fillerborder-imgborder))+"px";
+raam.style.left=(off.left-(fillerborder-imgborder))+"px";
+raam.style.width=filler.width+(2*fillerborder)+"px";
+raam.style.display="block";</textarea></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>Kontrollida, kas pealehel tekib pildi ümber raam, kui selle kohale minna. Kas ta kaob kui tema kohalt lahkuda?</li>
+</ol>
+
+</body>
+</html>
