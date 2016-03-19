@@ -4,6 +4,7 @@
  <meta charset="utf-8" />
  <title>Galerii</title>
  <link rel="stylesheet" type="text/css" href="stiil.css" />
+ <script src="skript.js"></script> 
 </head>
 <body>
 <div id="wrap">
@@ -20,8 +21,23 @@
 			<a href="big/wip.png" title="Vaata suuremalt"><img src="small/wip_small.png" alt="Work in progress - teadmata" height="100" width="150"  /></a>
 			<a href="big/slow.gif" title="Vaata suuremalt"><img src="small/slow_small.gif" alt="Kids at play - sildimeister" height="100" width="150" /></a>
 			<a href="big/fish.jpg" title="Vaata suuremalt"><img src="small/fish_small.jpg" alt="Fishing - kalamees" height="100" width="150" /></a>
+		
+			<div id="hoidja" style="display:none;">
+			  <div id="taust"></div>
+			  <div id="tabel">
+				<div id="cell">
+				  <div id="sulge" onclick="hideDetails();">Sulge</div>
+				  <div id="sisu">
+					<img id="suurpilt" src="Pictures/sign.jpg" alt="ajutine"/><br/>
+					<span id="inf"></span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
 		</div>
 	</div>
+	
 	
 	<p class="left">
   	<a href="http://validator.w3.org/check?uri=referer">
