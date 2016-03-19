@@ -4,7 +4,7 @@ window.addEventListener("load", function() {
 	var galerii;
 	galerii=document.getElementById('gallery');
 	if (galerii != null ) {
-		pildid=galerii.getElementByTagName('img');
+		pildid=galerii.getElementsByTagName('img');
 			for (var i=0;i<pildid.length;i++) {
 				pildid[i].onclick=function (){
 					showDetails(this);
@@ -63,5 +63,5 @@ window.addEventListener("load", function() {
 		}
 	}
 	
-
+	
 })
