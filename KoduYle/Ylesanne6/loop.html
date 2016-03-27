@@ -11,12 +11,23 @@
 		$(document).ready(function(){
 								
 				$("li").first().addClass("active");
-				// $("li").last().addClass("active");
-				
+
 				$("#next").click(function() {
+					var aktiivne=$(".active"); // leitakse klassiga .active element ja salvestatkse muutujasse
+					$("li").removeClass("active"); // eemaldatakse kõigilt listielementidelt klass .active
+					if (aktiivne.is(":last-child")) {
+						$("li").first().addClass("active");
+					} // kontrollitakse kas tegemist on viimase listielemndiga
+					aktiivne.next().addClass("active"); // lisatakse klass .active järgmisele elemendile
+				});	
+				
+				$("#prev").click(function() {
 					var aktiivne=$(".active");
 					$("li").removeClass("active");
-					aktiivne.next().addClass("active");
+					if (aktiivne.is(":first-child")) {
+						$("li").last().addClass("active");
+					}
+					aktiivne.prev().addClass("active");
 				});	
 		});
 				
