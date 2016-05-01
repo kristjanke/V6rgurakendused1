@@ -1,0 +1,22 @@
+CREATE TABLE 12128242_loomaaed (
+	id integer PRIMARY KEY auto_increment,
+	nimi varchar(100) NOT NULL,
+	vanus integer DEFAULT 1,
+	liik varchar(100) NOT NULL,
+	puur integer NOT NULL
+);
+
+INSERT INTO 12128242_loomaaed (id,nimi,vanus,liik,puur) VALUES
+(1,'Niit',4,'elevant', 1),
+(2,'Nööp',7,'krokodill', 3),
+(3,'Nõel',9,'ahv', 7),
+(4,'Lõng',2,'krokodill', 3),
+(5,'Täht',4,'ahv', 7);
+
+SELECT nimi,puur FROM 12128242_loomaaed WHERE puur=3;
+
+SELECT min(vanus) as 'Noorim loom', max(vanus) as 'Vanim loom' FROM 12128242_loomaaed;
+
+SELECT puur,count(*) as elanikke FROM 12128242_loomaaed GROUP BY liik ORDER BY puur ASC;
+
+UPDATE 12128242_loomaaed SET vanus=vanus+1;
