@@ -1,0 +1,15 @@
+CREATE TABLE 12128242_pildid (
+	id integer PRIMARY KEY auto_increment,
+	thumb varchar(100) NOT NULL,
+	pilt varchar NOT NULL,
+	pealkiri varchar(100) NOT NULL,
+	autor varchar NOT NULL,
+	punktid integer DEFAULT 0
+);
+
+INSERT INTO 12128242_pildid (id,thumb,pilt,pealkiri,autor, punktid) VALUES
+(1,'caution.jpg','caution_small.jpg','Oht', 'Kala', 15),
+(2,'closed.jpg','closed_small.jpg','Suletud', 'Köök', 115),
+(3,'fish.jpg','fish_small.jpg','Kalake', 'Vobla', 98),
+(4,'fly.jpg','fly_small.jpg','Lendab', 'Kala', 56),
+(5,'slow.jpg','slow_small.jpg','Aeglane', 'Vobla', 4);
