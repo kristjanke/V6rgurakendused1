@@ -1,0 +1,8 @@
+<?php foreach ($puurid as $puuri_id=>$puuri_nr) : ?>
+	<div class="puur">
+		<h2> Puur nr. <?php echo $puuri_id; ?> </h2>
+			<?php foreach ($puuri_nr as $looma_id=>$elanik): ?>
+				<img src="<?php echo $elanik['liik'];?>" alt="<?php echo $elanik['nimi'];?>" title="<?php echo $elanik['nimi'];?>">
+			<?php endforeach; ?>
+	</div>
+<?php endforeach; ?>
