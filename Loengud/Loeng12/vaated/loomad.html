@@ -1,0 +1,7 @@
+<?php if (!empty($loomad)):
+	foreach($loomad as $id=>$loom):
+?>
+<a href="?mode=loom&id=<?php echo $loom['id']; ?>"><img src="<?php echo $loom['pilt'];?>" alt="<?php echo $loom['nimi'];?>"></a> (Treener_id: <?php echo $loom['treener_id'];?>) <br/>
+<?php endforeach;
+endif;
+?>
