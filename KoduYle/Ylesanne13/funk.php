@@ -29,7 +29,18 @@ function kuva_puurid(){
 
 function logi(){
 	// siia on vaja funktsionaalsust (13. nädalal)
-
+	if (!empty($_GET["roll"])) {
+		if ($_GET["roll"]=="admin"){
+			$_SESSION["user"]="Boss";
+			$_SESSION["roll"]="admin";
+			$_SESSION["user_id"]=1;
+		} else {
+			$_SESSION["user"]="Treener1";
+			$_SESSION["roll"]="kasutaja";
+			$_SESSION["user_id"]=2;
+		}
+		header("Location: ?mode=loomad");
+	}
 	include_once('views/login.html');
 }
 
